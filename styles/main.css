@@ -185,3 +185,7 @@ html, body {
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {}
+
+.btn-custom-style{
+    border: 3px solid white !important;
+}
