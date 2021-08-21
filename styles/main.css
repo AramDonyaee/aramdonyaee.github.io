@@ -101,6 +101,11 @@ html, body {
 }
 
 
+/* color style */
+.text-color-447294 {
+    color: #447294
+}
+
 .illustration-image{
     width: 100%;
     object-fit: cover;
