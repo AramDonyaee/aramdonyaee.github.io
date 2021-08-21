@@ -47,6 +47,8 @@ html, body {
     height: 100vh;
     min-height: 500px;
     background-image: linear-gradient( 89.8deg,  rgba(39,115,255,1) 4.3%, rgba(62,211,232,1) 101.4% );
+    background-color: wheat;
+    color: black;
 }
 
 .avatar{
