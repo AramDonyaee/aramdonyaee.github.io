@@ -3,10 +3,35 @@
     <title>Aram Donyaee</title>
     <link href="https://aramdonyaee.github.io/feed.xml" rel="self" />
     <link href="https://aramdonyaee.github.io" />
-    <updated>1970-01-01T03:30:00+03:30</updated>
+    <updated>2022-08-04T12:21:40+04:30</updated>
     <author>
         <name>Aram Donyaee</name>
     </author>
     <id>https://aramdonyaee.github.io</id>
 
+    <entry>
+        <title>  Analyzing Sales Data to Improve Profitability</title>
+        <author>
+            <name>Aram Donyaee</name>
+        </author>
+        <link href="https://aramdonyaee.github.io/analyzing-sales-data-to-improve-profitability.html"/>
+        <id>https://aramdonyaee.github.io/analyzing-sales-data-to-improve-profitability.html</id>
+
+        <updated>2022-08-04T12:21:40+04:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://aramdonyaee.github.io/media/posts/1/markus-spiske-zVdAkU4s9lI-unsplash-2.jpg" alt="" />
+                    Business intelligence (BI) focuses on collecting and analyzing information about customers, decision-making processes, competition, market conditions and general economic, technological&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://aramdonyaee.github.io/media/posts/1/markus-spiske-zVdAkU4s9lI-unsplash-2.jpg" alt="" />
+                <p><i>Business intelligence (BI)</i> focuses on collecting and analyzing information about customers, decision-making processes, competition, market conditions and general economic, technological and cultural trends, in order to obtain decision-support information (<i>intelligence</i>).</p>
+<p>In this project I have used BI techniques and data analytics to extract useful insights from a real world sales dataset.</p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
 </feed>
