@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Aram Donyaee</title>
-    <link href="https://github.com/AramDonyaee/aramdonyaee.github.io/feed.xml" rel="self" />
-    <link href="https://github.com/AramDonyaee/aramdonyaee.github.io" />
+    <link href="https://aramdonyaee.github.io/feed.xml" rel="self" />
+    <link href="https://aramdonyaee.github.io" />
     <updated>1970-01-01T03:30:00+03:30</updated>
     <author>
         <name>Aram Donyaee</name>
     </author>
-    <id>https://github.com/AramDonyaee/aramdonyaee.github.io</id>
+    <id>https://aramdonyaee.github.io</id>
 
 </feed>
