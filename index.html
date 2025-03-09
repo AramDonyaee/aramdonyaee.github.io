@@ -12,25 +12,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-     <script>
+    <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#5cb85c', // Your green
-                secondary: '#333',    // Dark gray
-                lightgray: '#f4f4f4',
-                offwhite: '#f9f9f9',
-
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5cb85c', // Your green
+                        secondary: '#333', // Dark gray
+                        lightgray: '#f4f4f4',
+                        offwhite: '#f9f9f9',
+                    }
+                }
             }
-          }
         }
-      </script>
-
+    </script>
 </head>
 
 <body class="font-sans bg-lightgray">
+    <!-- Navigation -->
     <nav class="bg-secondary text-white sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center py-4">
             <a href="#" class="text-lg font-bold">Aram Donyaee</a>
@@ -48,46 +47,49 @@
                 <div class="line3 w-6 h-0.5 bg-white my-1"></div>
             </div>
         </div>
-         <!-- Mobile Nav (Initially Hidden) -->
+        <!-- Mobile Nav (Initially Hidden) -->
         <ul class="md:hidden fixed right-0 top-16 bg-secondary w-1/2 h-screen flex flex-col items-center space-y-4 pt-8 transform translate-x-full transition-transform duration-500 ease-in-out z-40"
             id="mobile-menu">
             <li><a href="#about" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">About</a></li>
-            <li><a href="#skills" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Skills</a></li>
-            <li><a href="#experience" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Experience</a></li>
-            <li><a href="#projects" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Projects</a></li>
-            <li><a href="#education" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Education</a></li>
-            <li><a href="#contact" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Contact</a></li>
+            <li><a href="#skills" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Skills</a>
+            </li>
+            <li><a href="#experience" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Experience</a>
+            </li>
+            <li><a href="#projects" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Projects</a>
+            </li>
+            <li><a href="#education" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Education</a>
+            </li>
+            <li><a href="#contact" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Contact</a>
+            </li>
         </ul>
     </nav>
 
-
-
-    <header id="about"
-        class="bg-gray-800 text-white text-center py-16 relative"
+    <!-- Header -->
+    <header id="about" class="bg-gray-800 text-white text-center py-16 relative"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080'); background-size: cover; background-position: center;">
         <div class="container mx-auto flex flex-col md:flex-row items-center">
-
             <div class="header-image mb-8 md:mb-0 md:mr-8 rounded-full overflow-hidden w-40 h-40">
-               <img src="https://via.placeholder.com/150" alt="Aram Donyaee" class="w-full h-full object-cover">
+                <img src="https://via.placeholder.com/150" alt="Aram Donyaee" class="w-full h-full object-cover">
             </div>
-
             <div class="text-center md:text-left">
                 <h1 class="text-4xl font-bold mb-4">Aram Donyaee</h1>
                 <p class="text-lg mb-4">Data Scientist | Full-Stack Developer | Bioinformatics Enthusiast</p>
                 <div class="flex justify-center md:justify-start space-x-4 mb-6">
-                   <a href="mailto:aramdonyaeeofficial@gmail.com" class="text-white text-2xl hover:text-gray-300"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/aram-donyaee" target="_blank" class="text-white text-2xl hover:text-gray-300"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/AramDonyaee" target="_blank" class="text-white text-2xl hover:text-gray-300"><i class="fab fa-github"></i></a>
+                    <a href="mailto:aramdonyaeeofficial@gmail.com" class="text-white text-2xl hover:text-gray-300"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/aram-donyaee" target="_blank"
+                        class="text-white text-2xl hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AramDonyaee" target="_blank"
+                        class="text-white text-2xl hover:text-gray-300"><i class="fab fa-github"></i></a>
                 </div>
-                 <a href="#projects" class="inline-block bg-primary hover:bg-green-600 text-white px-6 py-3 rounded-md mt-4">View
+                <a href="#projects"
+                    class="inline-block bg-primary hover:bg-green-600 text-white px-6 py-3 rounded-md mt-4">View
                     My Work</a>
             </div>
         </div>
     </header>
 
-
-
+    <!-- Skills -->
     <section id="skills" class="py-12 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
@@ -116,7 +118,7 @@
                 </div>
                 <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
                     <h3 class="text-2xl font-semibold mb-4">Languages & Frameworks</h3>
-                     <ul>
+                    <ul>
                         <li class="mb-2"><i class="fab fa-js-square"></i> JavaScript</li>
                         <li class="mb-2"><i class="fab fa-python"></i> Python</li>
                         <li class="mb-2">PHP</li>
@@ -127,7 +129,7 @@
                         <li class="mb-2"><i class="fab fa-css3-alt"></i> CSS</li>
                     </ul>
                 </div>
-                 <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
                     <h3 class="text-2xl font-semibold mb-4">Academic</h3>
                     <ul>
                         <li class="mb-2">LaTeX</li>
@@ -136,7 +138,6 @@
                         <li class="mb-2">Overleaf</li>
                     </ul>
                 </div>
-
                 <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
                     <h3 class="text-2xl font-semibold mb-4">Other</h3>
                     <ul>
@@ -150,34 +151,40 @@
         </div>
     </section>
 
+    <!-- Experience (Corrected Timeline) -->
+    <section id="experience" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
+            <div class="relative">
+                <!-- Timeline Line (Corrected Position) -->
+                <div class="absolute w-1 bg-gray-300 h-full left-1/2 transform -translate-x-1/2 hidden md:block"></div>
 
- <section id="experience" class="py-12">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-        <div class="relative">
-            <!-- Timeline Line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full hidden md:block"></div>
-
-            <div class="mb-8 md:flex md:justify-between">
-                <!-- Left Side (Odd) -->
-               <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-                    <div class="md:text-right">
-                        <p class="font-bold text-primary">Oct 2018 - Present</p>
+                <!-- First Experience Item (Nosard) -->
+                <div class="mb-10 md:mb-12 relative">
+                    <!-- Circle -->
+                    <div
+                        class="absolute w-5 h-5 rounded-full bg-white border-4 border-primary left-1/2 transform -translate-x-1/2 -translate-y-3 hidden md:block">
+                    </div>
+                    <!-- Content (Left on Mobile, Right on Desktop) -->
+                    <div class="md:w-1/2 md:ml-auto md:pl-12  md:text-left">
+                        <p class="font-bold text-primary mb-2">Oct 2018 - Present</p>
                         <div class="bg-white p-6 rounded-lg shadow-md">
                             <h3 class="text-xl font-semibold mb-2">Nosard Co. Ltd.</h3>
-                             <h4 class="text-lg font-medium mb-2">Senior Data Scientist (Jan 2021 - Present)</h4>
+                            <h4 class="text-lg font-medium mb-2">Senior Data Scientist (Jan 2021 - Present)</h4>
                             <ul class="list-disc list-inside">
-                                <li>Defined MVP for automated video gameplay testing software (Reinforcement Learning).</li>
-                                <li>Designed/developed 3D Unity environment, connected to TensorFlow-based RL network.</li>
+                                <li>Defined MVP for automated video gameplay testing software (Reinforcement Learning).
+                                </li>
+                                <li>Designed/developed 3D Unity environment, connected to TensorFlow-based RL network.
+                                </li>
                                 <li>Estimated model training cost/hardware.</li>
                                 <li>Led data analytics/predictive modeling projects.</li>
                                 <li>Built customer behavior forecasting algorithms (25% retention increase).</li>
                                 <li>Created Tableau/Power BI dashboards.</li>
                                 <li>Integrated data solutions with product/engineering teams.</li>
                             </ul>
-                            <h4 class="text-lg font-medium mb-2 mt-4">Full-Stack Web Developer (Oct 2018 - Dec 2020)</h4>
+                            <h4 class="text-lg font-medium mt-4 mb-2">Full-Stack Web Developer (Oct 2018 - Dec 2020)</h4>
                             <ul class="list-disc list-inside">
-                                 <li>Built CRM for currency exchange.</li>
+                                <li>Built CRM for currency exchange.</li>
                                 <li>Developed encrypted real-time messenger.</li>
                                 <li>Created e-commerce sites (automotive, herbs/spices).</li>
                             </ul>
@@ -185,12 +192,15 @@
                     </div>
                 </div>
 
-                <!-- Right Side (Even) -->
-                <div class="md:w-1/2 md:pl-8">
-                    <div class="md:text-left relative">
-                        <!-- Dot for Even Items -->
-
-                        <p class="font-bold text-primary">Sep 2017 - Sep 2018</p>
+                <!-- Second Experience Item (YAK Paper Mill) -->
+                <div class="mb-10 md:mb-0 relative">
+                    <!-- Circle -->
+                    <div
+                        class="absolute w-5 h-5 rounded-full bg-white border-4 border-primary left-1/2 transform -translate-x-1/2 -translate-y-3 hidden md:block">
+                    </div>
+                    <!-- Content (Left on Mobile, Left on Desktop - Alternating) -->
+                    <div class="md:w-1/2 md:pr-12 md:text-right">
+                        <p class="font-bold text-primary mb-2">Sep 2017 - Sep 2018</p>
                         <div class="bg-white p-6 rounded-lg shadow-md">
                             <h3 class="text-xl font-semibold mb-2">YAK Paper Mill</h3>
                             <h4 class="text-lg font-medium mb-2">Full-Stack Web Developer</h4>
@@ -204,17 +214,17 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
+
+    <!-- Projects -->
     <section id="projects" class="py-12 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
-
                     <h3 class="text-2xl font-semibold mb-2">PC-CDDM</h3>
                     <p class="mb-4">Official codebase for pancreatic cancer combinational drugs discovery study.</p>
                     <a href="https://github.com/AramDonyaee/PC-CDDM" target="_blank"
@@ -222,7 +232,6 @@
                         Repo</a>
                 </div>
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
-
                     <h3 class="text-2xl font-semibold mb-2">PIM1-Kinase-Inhibitor-QSAR</h3>
                     <p class="mb-4">Machine Learning QSAR Study for Investigating Inhibitory Molecule for PIM-1 Kinase.
                     </p>
@@ -231,7 +240,6 @@
                         Repo</a>
                 </div>
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
-
                     <h3 class="text-2xl font-semibold mb-2">SBA-DEG-Analysis</h3>
                     <p class="mb-4">Identification of novel hub genes for Small Bowel Adenocarcinoma.</p>
                     <a href="https://github.com/AramDonyaee/SBA-DEG-Analysis" target="_blank"
@@ -239,7 +247,6 @@
                         Repo</a>
                 </div>
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
-
                     <h3 class="text-2xl font-semibold mb-2">Mylinx</h3>
                     <p class="mb-4">A multi-featured link-in-bio generator built with Laravel and Vue.js.</p>
                     <a href="https://github.com/AramDonyaee/Mylinx" target="_blank"
@@ -247,7 +254,6 @@
                         Repo</a>
                 </div>
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
-
                     <h3 class="text-2xl font-semibold mb-2">ChEMBL-Explorer</h3>
                     <p class="mb-4">A web application for downloading bioactivity data from the ChEMBL database (Python,
                         Streamlit).</p>
@@ -257,36 +263,41 @@
                 </div>
                 <div class="bg-offwhite p-6 rounded-lg shadow-md">
                     <h3 class="text-2xl font-semibold mb-2">Blind navigation assistant system</h3>
-                    <p class="mb-4">Proposed an end-to-end deep-learning-based solution for assisting blind people with their navigation.</p>
-                    <p> The complete paper’s manuscript is available on my <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/aram-donyaee/">Linkedin</a>.</p>
+                    <p class="mb-4">Proposed an end-to-end deep-learning-based solution for assisting blind people with
+                        their navigation.</p>
+                    <p> The complete paper’s manuscript is available on my <a
+                            class="text-blue-500 hover:underline"
+                            href="https://www.linkedin.com/in/aram-donyaee/">Linkedin</a>.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education -->
     <section id="education" class="py-12">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
-        <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
-            <h3 class="text-2xl font-semibold mb-2">M.Sc. in Computer Engineering (Software)</h3>
-            <p class="mb-2">Azad University (2018-2020) - GPA: 3.8/4</p>
-            <p>Thesis: Virtual autonomous agent outdoor environment monitoring approach to improve the mobility of the blind by imitation learning.</p>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+            <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-2xl font-semibold mb-2">M.Sc. in Computer Engineering (Software)</h3>
+                <p class="mb-2">Azad University (2018-2020) - GPA: 3.8/4</p>
+                <p>Thesis: Virtual autonomous agent outdoor environment monitoring approach to improve the mobility of
+                    the blind by imitation learning.</p>
+            </div>
+            <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-2xl font-semibold mb-2">B.Sc. in Computer Engineering (Software)</h3>
+                <p>Azad University (2015-2018) - GPA: 3.8/4</p>
+            </div>
+            <div class="bg-offwhite p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2">Languages</h3>
+                <ul>
+                    <li class="mb-2">English (Full Professional Proficiency) - IELTS overall 7.5</li>
+                    <li class="mb-2">Farsi (Native)</li>
+                </ul>
+            </div>
         </div>
-        <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
-            <h3 class="text-2xl font-semibold mb-2">B.Sc. in Computer Engineering (Software)</h3>
-            <p>Azad University (2015-2018) - GPA: 3.8/4</p>
-        </div>
-        <div class="bg-offwhite p-6 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold mb-2">Languages</h3>
-            <ul>
-                <li class="mb-2">English (Full Professional Proficiency) - IELTS overall 7.5</li>
-                <li class="mb-2">Farsi (Native)</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
-
+    <!-- Contact -->
     <section id="contact" class="py-12 bg-secondary text-white">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
@@ -302,31 +313,32 @@
                 <p class="mb-4"><i class="fab fa-github mr-2"></i> GitHub: <a href="https://github.com/AramDonyaee"
                         target="_blank" class="hover:underline">github.com/AramDonyaee</a></p>
                 <p class="mb-4"> <i class="fas fa-phone mr-2"></i>Phone: (+98) 919-122-9630</p>
-                <p class="mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Address: 124, Sarvestan, Mehestan, Alborz, IRAN</p>
+                <p class="mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Address: 124, Sarvestan, Mehestan, Alborz,
+                    IRAN</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-secondary text-white text-center py-4">
         <div class="container mx-auto">
             <p>© 2024 Aram Donyaee. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript (Mobile Menu and Burger Animation) -->
     <script>
-        // JavaScript for Mobile Menu and Burger Animation
         const burger = document.querySelector('.burger');
         const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.querySelectorAll('#mobile-menu li');
 
-
         burger.addEventListener('click', () => {
             // Toggle Nav
             mobileMenu.classList.toggle('translate-x-full');
-             mobileMenu.classList.toggle('nav-active'); // Keep for animation
+            mobileMenu.classList.toggle('nav-active'); // Keep for animation
 
             // Animate Links
-             navLinks.forEach((link, index) => {
+            navLinks.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
                 } else {
@@ -334,10 +346,9 @@
                 }
             });
 
-
             // Burger Animation
             burger.classList.toggle('toggle');
-             //Burger icon animation
+            //Burger icon animation
             document.querySelector('.line1').classList.toggle('rotate-45');
             document.querySelector('.line1').classList.toggle('translate-y-[6px]');
             document.querySelector('.line2').classList.toggle('opacity-0');
