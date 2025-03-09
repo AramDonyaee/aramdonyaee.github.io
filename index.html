@@ -4,768 +4,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
     <title>Aram Donyaee - Data Scientist & Full-Stack Developer</title>
+    <meta name="robots" content="noindex">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* CSS Styles (Same as before, but embedded) */
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-        }
-
-
-        ul {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-
-        /* Navigation */
-        nav {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav .logo {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #fff;
-        }
-
-        nav .nav-links {
-            display: flex;
-            justify-content: space-around;
-            width: 50%;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        nav a {
-            color: #fff;
-            padding: 0.5rem 1rem;
-            transition: background 0.3s ease;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            background: #555;
-        }
-
-
-        /* Header */
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080');
-            /* Placeholder Background */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header-content h1 {
-            color: white;
-        }
-
-        .header-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .header-image {
-            margin-top: 2rem;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .header-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-
-        .social-icons a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #ddd;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #5cb85c;
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background: #4cae4c;
-        }
-
-
-        /* Skills */
-        #skills {
-            padding: 3rem 0;
-            background-color: #fff;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skills-grid div {
-            padding: 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .skills-grid ul li {
-            margin-bottom: 0.5rem;
-        }
-
-
-        /* Experience */
-        #experience {
-            padding: 3rem 0;
-            background-color: #f0f0f0;
-        }
-
-
-        /* Projects */
-        #projects {
-            padding: 3rem 0;
-            background-color: #fff;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .project img {
-            width: 100%;
-            height: 200px;
-            /* Set a fixed height */
-            object-fit: cover;
-            /* Ensure the image covers the area without stretching */
-            display: block;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .btn-project {
-            display: inline-block;
-            background-color: #007bff;
-            /* Bootstrap primary color */
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 0.5rem;
-            transition: background-color 0.3s ease;
-            display: block;
-            /* Make the link fill the container */
-            text-align: center;
-        }
-
-        .btn-project:hover {
-            background-color: #0056b3;
-            /* Darker shade on hover */
-        }
-
-
-
-        /* Education */
-        #education {
-            padding: 3rem 0;
-        }
-
-        #education .container {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .education-item {
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 3px solid #5cb85c;
-            /* Consistent with .btn color */
-
-        }
-
-
-        /* Contact */
-        #contact {
-            padding: 3rem 0;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.8rem;
-        }
-
-        #contact a {
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-
-
-        /* Timeline Styling */
-        .timeline {
-            position: relative;
-            padding: 1rem 0;
-        }
-
-        /* The line down the middle */
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: #ddd;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-
-        .timeline-item {
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-
-        }
-
-        /* Circles on the timeline */
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: white;
-            border: 3px solid #5cb85c;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        /* Place the timeline-item to the left */
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
-            padding-right: 30px;
-            /* Give some space for the circle */
-        }
-
-        /* Place the timeline-item to the right */
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 30px;
-            /* Give some space for the circle */
-        }
-
-        /* Fix the circle for timeline-items on the right */
-        .timeline-item:nth-child(even)::after {
-            left: -10px;
-        }
-
-
-        .timeline-date {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #5cb85c;
-        }
-
-        .timeline-content {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-content ul {
-            margin-top: 0.7rem;
-        }
-
-        /* Hamburger Menu */
-        .burger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 5px;
-            transition: all 0.3s ease;
-        }
-
-        /* Responsive Design */
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            nav .nav-links {
-                position: fixed;
-                right: 0;
-                top: 64px;
-                /* Adjust based on your nav height */
-                background: #333;
-                flex-direction: column;
-                width: 50%;
-                height: 100vh;
-                align-items: center;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
-                z-index: 99;
-                /* Ensure it's above other content */
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#5cb85c', // Your green
+                secondary: '#333',    // Dark gray
+                lightgray: '#f4f4f4',
+                offwhite: '#f9f9f9',
+
+              }
             }
-
-            nav .nav-links li {
-                opacity: 0;
-                width: 100%;
-                text-align: center;
-
-            }
-
-            nav .nav-links li a {
-                display: block;
-                padding: 1rem;
-
-            }
-
-            .burger {
-                display: block;
-            }
-
-            .header-content {
-                padding: 2rem;
-            }
-
-            header {
-                flex-direction: column;
-            }
-
-            /* Timeline adjustments */
-            .timeline::after {
-                left: 31px;
-                /* Move the line to the left for mobile */
-            }
-
-            .timeline-item {
-                width: 100%;
-                margin-bottom: 1rem;
-                text-align: left;
-                padding-left: 50px;
-                /* Give some space for the circle */
-                padding-right: 15px;
-                /* Add some right padding */
-            }
-
-            .timeline-item::after {
-                left: 15px;
-                /* Adjust circle position */
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                left: 0;
-                /* Reset left positioning */
-                padding-left: 50px;
-                /* Consistent padding for all items */
-                text-align: left;
-            }
-
-            .timeline-item:nth-child(even)::after {
-                left: 15px;
-                /* Adjust circle position for even items */
-            }
-
+          }
         }
+      </script>
 
-        .nav-active {
-            transform: translateX(0%);
-        }
-
-        @keyframes navLinkFade {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0px);
-            }
-        }
-
-        /* Burger Animation */
-        .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .toggle .line2 {
-            opacity: 0;
-        }
-
-        .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-    </style>
 </head>
 
-<body>
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">Aram Donyaee</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body class="font-sans bg-lightgray">
+    <nav class="bg-secondary text-white sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <a href="#" class="text-lg font-bold">Aram Donyaee</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:bg-gray-700 px-3 py-2 rounded-md">About</a></li>
+                <li><a href="#skills" class="hover:bg-gray-700 px-3 py-2 rounded-md">Skills</a></li>
+                <li><a href="#experience" class="hover:bg-gray-700 px-3 py-2 rounded-md">Experience</a></li>
+                <li><a href="#projects" class="hover:bg-gray-700 px-3 py-2 rounded-md">Projects</a></li>
+                <li><a href="#education" class="hover:bg-gray-700 px-3 py-2 rounded-md">Education</a></li>
+                <li><a href="#contact" class="hover:bg-gray-700 px-3 py-2 rounded-md">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="md:hidden burger cursor-pointer">
+                <div class="line1 w-6 h-0.5 bg-white my-1"></div>
+                <div class="line2 w-6 h-0.5 bg-white my-1"></div>
+                <div class="line3 w-6 h-0.5 bg-white my-1"></div>
             </div>
         </div>
+         <!-- Mobile Nav (Initially Hidden) -->
+        <ul class="md:hidden fixed right-0 top-16 bg-secondary w-1/2 h-screen flex flex-col items-center space-y-4 pt-8 transform translate-x-full transition-transform duration-500 ease-in-out z-40"
+            id="mobile-menu">
+            <li><a href="#about" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">About</a></li>
+            <li><a href="#skills" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Skills</a></li>
+            <li><a href="#experience" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Experience</a></li>
+            <li><a href="#projects" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Projects</a></li>
+            <li><a href="#education" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Education</a></li>
+            <li><a href="#contact" class="hover:bg-gray-700 px-4 py-2 rounded-md block w-full text-center">Contact</a></li>
+        </ul>
     </nav>
 
-    <header id="about">
-        <div class="container">
-            <div class="header-content">
-                <h1>Aram Donyaee</h1>
-                <p>Data Scientist | Full-Stack Developer | Bioinformatics Enthusiast</p>
-                <div class="social-icons">
-                    <a href="mailto:aramdonyaeeofficial@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/aram-donyaee" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/AramDonyaee" target="_blank"><i class="fab fa-github"></i></a>
 
-                </div>
-                <a href="#projects" class="btn">View My Work</a>
+
+    <header id="about"
+        class="bg-gray-800 text-white text-center py-16 relative"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080'); background-size: cover; background-position: center;">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+
+            <div class="header-image mb-8 md:mb-0 md:mr-8 rounded-full overflow-hidden w-40 h-40">
+               <img src="https://via.placeholder.com/150" alt="Aram Donyaee" class="w-full h-full object-cover">
             </div>
-            <div class="header-image">
-                <!-- Placeholder for a professional photo.  Replace with your actual image -->
-                <img src="https://via.placeholder.com/150" alt="Aram Donyaee">
+
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold mb-4">Aram Donyaee</h1>
+                <p class="text-lg mb-4">Data Scientist | Full-Stack Developer | Bioinformatics Enthusiast</p>
+                <div class="flex justify-center md:justify-start space-x-4 mb-6">
+                   <a href="mailto:aramdonyaeeofficial@gmail.com" class="text-white text-2xl hover:text-gray-300"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/aram-donyaee" target="_blank" class="text-white text-2xl hover:text-gray-300"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AramDonyaee" target="_blank" class="text-white text-2xl hover:text-gray-300"><i class="fab fa-github"></i></a>
+                </div>
+                 <a href="#projects" class="inline-block bg-primary hover:bg-green-600 text-white px-6 py-3 rounded-md mt-4">View
+                    My Work</a>
             </div>
         </div>
     </header>
 
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>Bioinformatics</h3>
+
+    <section id="skills" class="py-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                    <h3 class="text-2xl font-semibold mb-4">Bioinformatics</h3>
                     <ul>
-                        <li>Differentially Gene Expression Analysis</li>
-                        <li>Microarray Analysis</li>
-                        <li>ML-based QSAR</li>
-                        <li>GEO, ChEMBL, STRINGS, Cytoscape</li>
-                        <li>NetworkAnalyst, Enrichment Analysis (GO, KEGG)</li>
-                        <li>DrugBank, PadelPy, PubChemPy, RDKIT</li>
+                        <li class="mb-2">Differentially Gene Expression Analysis</li>
+                        <li class="mb-2">Microarray Analysis</li>
+                        <li class="mb-2">ML-based QSAR</li>
+                        <li class="mb-2">GEO, ChEMBL, STRINGS, Cytoscape</li>
+                        <li class="mb-2">NetworkAnalyst, Enrichment Analysis (GO, KEGG)</li>
+                        <li class="mb-2">DrugBank, PadelPy, PubChemPy, RDKIT</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Machine Learning & Data Science</h3>
+                <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                    <h3 class="text-2xl font-semibold mb-4">Machine Learning & Data Science</h3>
                     <ul>
-                        <li>Scikit-learn</li>
-                        <li>Pandas, NumPy</li>
-                        <li>TensorFlow, Keras</li>
-                        <li>R Studio, Matplotlib</li>
-                        <li>Jupyter Notebook, Conda/Anaconda</li>
-                        <li>Tableau, Power BI</li>
+                        <li class="mb-2">Scikit-learn</li>
+                        <li class="mb-2">Pandas, NumPy</li>
+                        <li class="mb-2">TensorFlow, Keras</li>
+                        <li class="mb-2">R Studio, Matplotlib</li>
+                        <li class="mb-2">Jupyter Notebook, Conda/Anaconda</li>
+                        <li class="mb-2">Tableau, Power BI</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Languages & Frameworks</h3>
-                    <ul>
-                        <li><i class="fab fa-js-square"></i> JavaScript</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li>PHP</li>
-                        <li>R</li>
-                        <li>Laravel</li>
-                        <li>Vue.js</li>
-                        <li><i class="fab fa-html5"></i> HTML</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                    <h3 class="text-2xl font-semibold mb-4">Languages & Frameworks</h3>
+                     <ul>
+                        <li class="mb-2"><i class="fab fa-js-square"></i> JavaScript</li>
+                        <li class="mb-2"><i class="fab fa-python"></i> Python</li>
+                        <li class="mb-2">PHP</li>
+                        <li class="mb-2">R</li>
+                        <li class="mb-2">Laravel</li>
+                        <li class="mb-2">Vue.js</li>
+                        <li class="mb-2"><i class="fab fa-html5"></i> HTML</li>
+                        <li class="mb-2"><i class="fab fa-css3-alt"></i> CSS</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Academic</h3>
+                 <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                    <h3 class="text-2xl font-semibold mb-4">Academic</h3>
                     <ul>
-                        <li>LaTeX</li>
-                        <li>Zotero</li>
-                        <li>EndNote</li>
-                        <li>Overleaf</li>
+                        <li class="mb-2">LaTeX</li>
+                        <li class="mb-2">Zotero</li>
+                        <li class="mb-2">EndNote</li>
+                        <li class="mb-2">Overleaf</li>
                     </ul>
                 </div>
 
-                <div>
-                    <h3>Other</h3>
+                <div class="p-6 border border-gray-300 rounded-lg bg-offwhite">
+                    <h3 class="text-2xl font-semibold mb-4">Other</h3>
                     <ul>
-                        <li>Linux</li>
-                        <li>Docker</li>
-                        <li>CI/CD</li>
-                        <li>Git</li>
+                        <li class="mb-2">Linux</li>
+                        <li class="mb-2">Docker</li>
+                        <li class="mb-2">CI/CD</li>
+                        <li class="mb-2">Git</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Oct 2018 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Nosard Co. Ltd.</h3>
-                        <h4>Senior Data Scientist (Jan 2021 - Present)</h4>
-                        <ul>
-                            <li>Defined and set the path for an MVP of an automated video gameplay testing software based
-                                on Reinforcement Learning.</li>
-                            <li>Designed and developed a complex 3D Unity environment and connected it to a pre-written
-                                TensorFlow-based RL neural network.</li>
-                            <li>Estimated the cost and hardware requirements for model training.</li>
-                            <li>Worked on various data analytics and predictive modelling projects.</li>
-                            <li>Created machine learning algorithms to forecast customer behavior (25% increase in
-                                retention rates).</li>
-                            <li>Designed interactive dashboards using Tableau and Power BI.</li>
-                            <li>Partnered with product and engineering teams to integrate data-driven solutions.</li>
-                        </ul>
-                        <h4>Full-Stack Web Developer (Oct 2018 - Dec 2020)</h4>
-                        <ul>
-                            <li>Built an internal CRM for a currency exchange business.</li>
-                            <li>Developed a customized in-app encrypted real-time messenger.</li>
-                            <li>Developed e-commerce websites for automotive spare parts and herbs/spices stores.</li>
-                        </ul>
+
+ <section id="experience" class="py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full hidden md:block"></div>
+
+            <div class="mb-8 md:flex md:justify-between">
+                <!-- Left Side (Odd) -->
+               <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                    <div class="md:text-right">
+                        <p class="font-bold text-primary">Oct 2018 - Present</p>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-2">Nosard Co. Ltd.</h3>
+                             <h4 class="text-lg font-medium mb-2">Senior Data Scientist (Jan 2021 - Present)</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Defined MVP for automated video gameplay testing software (Reinforcement Learning).</li>
+                                <li>Designed/developed 3D Unity environment, connected to TensorFlow-based RL network.</li>
+                                <li>Estimated model training cost/hardware.</li>
+                                <li>Led data analytics/predictive modeling projects.</li>
+                                <li>Built customer behavior forecasting algorithms (25% retention increase).</li>
+                                <li>Created Tableau/Power BI dashboards.</li>
+                                <li>Integrated data solutions with product/engineering teams.</li>
+                            </ul>
+                            <h4 class="text-lg font-medium mb-2 mt-4">Full-Stack Web Developer (Oct 2018 - Dec 2020)</h4>
+                            <ul class="list-disc list-inside">
+                                 <li>Built CRM for currency exchange.</li>
+                                <li>Developed encrypted real-time messenger.</li>
+                                <li>Created e-commerce sites (automotive, herbs/spices).</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2017 - Sep 2018</div>
-                    <div class="timeline-content">
-                        <h3>YAK Paper Mill</h3>
-                        <h4>Full-Stack Web Developer</h4>
-                        <ul>
-                            <li>Built and maintained the YAK Paper online store.</li>
-                            <li>Implemented SEO strategies (significant increase in traffic and orders).</li>
-                            <li>Optimized the website for high traffic loads.</li>
-                        </ul>
+
+                <!-- Right Side (Even) -->
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="md:text-left relative">
+                        <!-- Dot for Even Items -->
+
+                        <p class="font-bold text-primary">Sep 2017 - Sep 2018</p>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-2">YAK Paper Mill</h3>
+                            <h4 class="text-lg font-medium mb-2">Full-Stack Web Developer</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Built/maintained YAK Paper online store.</li>
+                                <li>Implemented SEO (increased traffic/orders).</li>
+                                <li>Optimized for high traffic.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>PC-CDDM</h3>
-                    <p>Official codebase for pancreatic cancer combinational drugs discovery study.</p>
-                    <a href="https://github.com/AramDonyaee/PC-CDDM" target="_blank" class="btn-project">GitHub Repo</a>
+    <section id="projects" class="py-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+
+                    <h3 class="text-2xl font-semibold mb-2">PC-CDDM</h3>
+                    <p class="mb-4">Official codebase for pancreatic cancer combinational drugs discovery study.</p>
+                    <a href="https://github.com/AramDonyaee/PC-CDDM" target="_blank"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">GitHub
+                        Repo</a>
                 </div>
-                <div class="project">
-                    <h3>PIM1-Kinase-Inhibitor-QSAR</h3>
-                    <p>Machine Learning QSAR Study for Investigating Inhibitory Molecule for PIM-1 Kinase.</p>
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+
+                    <h3 class="text-2xl font-semibold mb-2">PIM1-Kinase-Inhibitor-QSAR</h3>
+                    <p class="mb-4">Machine Learning QSAR Study for Investigating Inhibitory Molecule for PIM-1 Kinase.
+                    </p>
                     <a href="https://github.com/AramDonyaee/PIM1-Kinase-Inhibitor-QSAR" target="_blank"
-                        class="btn-project">GitHub Repo</a>
-                </div>
-                <div class="project">
-                    <h3>SBA-DEG-Analysis</h3>
-                    <p>Identification of novel hub genes for Small Bowel Adenocarcinoma.</p>
-                    <a href="https://github.com/AramDonyaee/SBA-DEG-Analysis" target="_blank" class="btn-project">GitHub
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">GitHub
                         Repo</a>
                 </div>
-                <div class="project">
-                    <h3>Mylinx</h3>
-                    <p>A multi-featured link-in-bio generator built with Laravel and Vue.js.</p>
-                    <a href="https://github.com/AramDonyaee/Mylinx" target="_blank" class="btn-project">GitHub Repo</a>
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+
+                    <h3 class="text-2xl font-semibold mb-2">SBA-DEG-Analysis</h3>
+                    <p class="mb-4">Identification of novel hub genes for Small Bowel Adenocarcinoma.</p>
+                    <a href="https://github.com/AramDonyaee/SBA-DEG-Analysis" target="_blank"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">GitHub
+                        Repo</a>
                 </div>
-                <div class="project">
-                    <h3>ChEMBL-Explorer</h3>
-                    <p>A web application for downloading bioactivity data from the ChEMBL database (Python,
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+
+                    <h3 class="text-2xl font-semibold mb-2">Mylinx</h3>
+                    <p class="mb-4">A multi-featured link-in-bio generator built with Laravel and Vue.js.</p>
+                    <a href="https://github.com/AramDonyaee/Mylinx" target="_blank"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">GitHub
+                        Repo</a>
+                </div>
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+
+                    <h3 class="text-2xl font-semibold mb-2">ChEMBL-Explorer</h3>
+                    <p class="mb-4">A web application for downloading bioactivity data from the ChEMBL database (Python,
                         Streamlit).</p>
-                    <a href="https://github.com/AramDonyaee/ChEMBL-Explorer" target="_blank" class="btn-project">GitHub
+                    <a href="https://github.com/AramDonyaee/ChEMBL-Explorer" target="_blank"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded block text-center">GitHub
                         Repo</a>
                 </div>
-                <div class="project">
-                    <h3>Blind navigation assistant system</h3>
-                    <p>Proposed an end-to-end deep-learning-based solution for assisting blind people with their
-                        navigation.</p>
-                    <p> The complete paper’s manuscript is available on my <a
-                            href="https://www.linkedin.com/in/aram-donyaee/">Linkedin</a>.</p>
+                <div class="bg-offwhite p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-2">Blind navigation assistant system</h3>
+                    <p class="mb-4">Proposed an end-to-end deep-learning-based solution for assisting blind people with their navigation.</p>
+                    <p> The complete paper’s manuscript is available on my <a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/aram-donyaee/">Linkedin</a>.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>M.Sc. in Computer Engineering (Software)</h3>
-                <p>Azad University (2018-2020) - GPA: 3.8/4</p>
-                <p>Thesis: Virtual autonomous agent outdoor environment monitoring approach to improve the mobility of
-                    the blind by imitation learning.</p>
-            </div>
-            <div class="education-item">
-                <h3>B.Sc. in Computer Engineering (Software)</h3>
-                <p>Azad University (2015-2018) - GPA: 3.8/4</p>
-            </div>
-            <div class="education-item">
-                <h3>Languages</h3>
-                <ul>
-                    <li>English (Full Professional Proficiency) - IELTS overall 7.5</li>
-                    <li>Farsi (Native)</li>
-                </ul>
+    <section id="education" class="py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+        <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
+            <h3 class="text-2xl font-semibold mb-2">M.Sc. in Computer Engineering (Software)</h3>
+            <p class="mb-2">Azad University (2018-2020) - GPA: 3.8/4</p>
+            <p>Thesis: Virtual autonomous agent outdoor environment monitoring approach to improve the mobility of the blind by imitation learning.</p>
+        </div>
+        <div class="bg-offwhite p-6 rounded-lg shadow-md mb-6">
+            <h3 class="text-2xl font-semibold mb-2">B.Sc. in Computer Engineering (Software)</h3>
+            <p>Azad University (2015-2018) - GPA: 3.8/4</p>
+        </div>
+        <div class="bg-offwhite p-6 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-2">Languages</h3>
+            <ul>
+                <li class="mb-2">English (Full Professional Proficiency) - IELTS overall 7.5</li>
+                <li class="mb-2">Farsi (Native)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact" class="py-12 bg-secondary text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
+            <p class="text-center mb-6">I'm always open to new opportunities and collaborations. Feel free to reach
+                out!</p>
+            <div class="text-center">
+                <p class="mb-4"><i class="fas fa-envelope mr-2"></i> Email: <a
+                        href="mailto:aramdonyaeeofficial@gmail.com"
+                        class="hover:underline">aramdonyaeeofficial@gmail.com</a></p>
+                <p class="mb-4"><i class="fab fa-linkedin mr-2"></i> LinkedIn: <a
+                        href="https://www.linkedin.com/in/aram-donyaee" target="_blank"
+                        class="hover:underline">linkedin.com/in/aram-donyaee</a></p>
+                <p class="mb-4"><i class="fab fa-github mr-2"></i> GitHub: <a href="https://github.com/AramDonyaee"
+                        target="_blank" class="hover:underline">github.com/AramDonyaee</a></p>
+                <p class="mb-4"> <i class="fas fa-phone mr-2"></i>Phone: (+98) 919-122-9630</p>
+                <p class="mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Address: 124, Sarvestan, Mehestan, Alborz, IRAN</p>
             </div>
         </div>
     </section>
 
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <div class="contact-info">
-
-                <p><i class="fas fa-envelope"></i> Email: <a
-                        href="mailto:aramdonyaeeofficial@gmail.com">aramdonyaeeofficial@gmail.com</a></p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/aram-donyaee"
-                        target="_blank">linkedin.com/in/aram-donyaee</a></p>
-                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/AramDonyaee"
-                        target="_blank">github.com/AramDonyaee</a></p>
-                <p><i class="fas fa-phone"></i> Phone: (+98) 919-122-9630</p>
-                <p><i class="fas fa-map-marker-alt"></i> Address: 124, Sarvestan, Mehestan, Alborz, IRAN</p>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
+    <footer class="bg-secondary text-white text-center py-4">
+        <div class="container mx-auto">
             <p>© 2024 Aram Donyaee. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript (Same as before, but embedded)
+        // JavaScript for Mobile Menu and Burger Animation
         const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinksLi = document.querySelectorAll('.nav-links li')
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu li');
+
 
         burger.addEventListener('click', () => {
             // Toggle Nav
-            navLinks.classList.toggle('nav-active');
+            mobileMenu.classList.toggle('translate-x-full');
+             mobileMenu.classList.toggle('nav-active'); // Keep for animation
 
             // Animate Links
-            navLinksLi.forEach((link, index) => {
+             navLinks.forEach((link, index) => {
                 if (link.style.animation) {
                     link.style.animation = '';
                 } else {
@@ -773,9 +334,15 @@
                 }
             });
 
+
             // Burger Animation
             burger.classList.toggle('toggle');
-
+             //Burger icon animation
+            document.querySelector('.line1').classList.toggle('rotate-45');
+            document.querySelector('.line1').classList.toggle('translate-y-[6px]');
+            document.querySelector('.line2').classList.toggle('opacity-0');
+            document.querySelector('.line3').classList.toggle('-rotate-45');
+            document.querySelector('.line3').classList.toggle('-translate-y-[6px]');
         });
     </script>
 </body>
