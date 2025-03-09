@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aram Donyaee - Data Scientist & Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* CSS Styles (Same as before, but embedded) */
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+
+        /* Navigation */
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        nav .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        nav a {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080');
+            /* Placeholder Background */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            color: white;
+        }
+
+        .header-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .header-image {
+            margin-top: 2rem;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #5cb85c;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #4cae4c;
+        }
+
+
+        /* Skills */
+        #skills {
+            padding: 3rem 0;
+            background-color: #fff;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skills-grid div {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .skills-grid ul li {
+            margin-bottom: 0.5rem;
+        }
+
+
+        /* Experience */
+        #experience {
+            padding: 3rem 0;
+            background-color: #f0f0f0;
+        }
+
+
+        /* Projects */
+        #projects {
+            padding: 3rem 0;
+            background-color: #fff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            /* Set a fixed height */
+            object-fit: cover;
+            /* Ensure the image covers the area without stretching */
+            display: block;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .btn-project {
+            display: inline-block;
+            background-color: #007bff;
+            /* Bootstrap primary color */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s ease;
+            display: block;
+            /* Make the link fill the container */
+            text-align: center;
+        }
+
+        .btn-project:hover {
+            background-color: #0056b3;
+            /* Darker shade on hover */
+        }
+
+
+
+        /* Education */
+        #education {
+            padding: 3rem 0;
+        }
+
+        #education .container {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid #5cb85c;
+            /* Consistent with .btn color */
+
+        }
+
+
+        /* Contact */
+        #contact {
+            padding: 3rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+        }
+
+        #contact a {
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+
+
+        /* Timeline Styling */
+        .timeline {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        /* The line down the middle */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+
+        }
+
+        /* Circles on the timeline */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 3px solid #5cb85c;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the timeline-item to the left */
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 30px;
+            /* Give some space for the circle */
+        }
+
+        /* Place the timeline-item to the right */
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 30px;
+            /* Give some space for the circle */
+        }
+
+        /* Fix the circle for timeline-items on the right */
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+
+        .timeline-date {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #5cb85c;
+        }
+
+        .timeline-content {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content ul {
+            margin-top: 0.7rem;
+        }
+
+        /* Hamburger Menu */
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Design */
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                position: fixed;
+                right: 0;
+                top: 64px;
+                /* Adjust based on your nav height */
+                background: #333;
+                flex-direction: column;
+                width: 50%;
+                height: 100vh;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                z-index: 99;
+                /* Ensure it's above other content */
+            }
+
+            nav .nav-links li {
+                opacity: 0;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            nav .nav-links li a {
+                display: block;
+                padding: 1rem;
+
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .header-content {
+                padding: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+            }
+
+            /* Timeline adjustments */
+            .timeline::after {
+                left: 31px;
+                /* Move the line to the left for mobile */
+            }
+
+            .timeline-item {
+                width: 100%;
+                margin-bottom: 1rem;
+                text-align: left;
+                padding-left: 50px;
+                /* Give some space for the circle */
+                padding-right: 15px;
+                /* Add some right padding */
+            }
+
+            .timeline-item::after {
+                left: 15px;
+                /* Adjust circle position */
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+                /* Reset left positioning */
+                padding-left: 50px;
+                /* Consistent padding for all items */
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: 15px;
+                /* Adjust circle position for even items */
+            }
+
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        /* Burger Animation */
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Aram Donyaee</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about">
+        <div class="container">
+            <div class="header-content">
+                <h1>Aram Donyaee</h1>
+                <p>Data Scientist | Full-Stack Developer | Bioinformatics Enthusiast</p>
+                <div class="social-icons">
+                    <a href="mailto:aramdonyaeeofficial@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/aram-donyaee" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/AramDonyaee" target="_blank"><i class="fab fa-github"></i></a>
+
+                </div>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+            <div class="header-image">
+                <!-- Placeholder for a professional photo.  Replace with your actual image -->
+                <img src="https://via.placeholder.com/150" alt="Aram Donyaee">
+            </div>
+        </div>
+    </header>
+
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Bioinformatics</h3>
+                    <ul>
+                        <li>Differentially Gene Expression Analysis</li>
+                        <li>Microarray Analysis</li>
+                        <li>ML-based QSAR</li>
+                        <li>GEO, ChEMBL, STRINGS, Cytoscape</li>
+                        <li>NetworkAnalyst, Enrichment Analysis (GO, KEGG)</li>
+                        <li>DrugBank, PadelPy, PubChemPy, RDKIT</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Machine Learning & Data Science</h3>
+                    <ul>
+                        <li>Scikit-learn</li>
+                        <li>Pandas, NumPy</li>
+                        <li>TensorFlow, Keras</li>
+                        <li>R Studio, Matplotlib</li>
+                        <li>Jupyter Notebook, Conda/Anaconda</li>
+                        <li>Tableau, Power BI</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Languages & Frameworks</h3>
+                    <ul>
+                        <li><i class="fab fa-js-square"></i> JavaScript</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li>PHP</li>
+                        <li>R</li>
+                        <li>Laravel</li>
+                        <li>Vue.js</li>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Academic</h3>
+                    <ul>
+                        <li>LaTeX</li>
+                        <li>Zotero</li>
+                        <li>EndNote</li>
+                        <li>Overleaf</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Other</h3>
+                    <ul>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                        <li>CI/CD</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2018 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Nosard Co. Ltd.</h3>
+                        <h4>Senior Data Scientist (Jan 2021 - Present)</h4>
+                        <ul>
+                            <li>Defined and set the path for an MVP of an automated video gameplay testing software based
+                                on Reinforcement Learning.</li>
+                            <li>Designed and developed a complex 3D Unity environment and connected it to a pre-written
+                                TensorFlow-based RL neural network.</li>
+                            <li>Estimated the cost and hardware requirements for model training.</li>
+                            <li>Worked on various data analytics and predictive modelling projects.</li>
+                            <li>Created machine learning algorithms to forecast customer behavior (25% increase in
+                                retention rates).</li>
+                            <li>Designed interactive dashboards using Tableau and Power BI.</li>
+                            <li>Partnered with product and engineering teams to integrate data-driven solutions.</li>
+                        </ul>
+                        <h4>Full-Stack Web Developer (Oct 2018 - Dec 2020)</h4>
+                        <ul>
+                            <li>Built an internal CRM for a currency exchange business.</li>
+                            <li>Developed a customized in-app encrypted real-time messenger.</li>
+                            <li>Developed e-commerce websites for automotive spare parts and herbs/spices stores.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2017 - Sep 2018</div>
+                    <div class="timeline-content">
+                        <h3>YAK Paper Mill</h3>
+                        <h4>Full-Stack Web Developer</h4>
+                        <ul>
+                            <li>Built and maintained the YAK Paper online store.</li>
+                            <li>Implemented SEO strategies (significant increase in traffic and orders).</li>
+                            <li>Optimized the website for high traffic loads.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>PC-CDDM</h3>
+                    <p>Official codebase for pancreatic cancer combinational drugs discovery study.</p>
+                    <a href="https://github.com/AramDonyaee/PC-CDDM" target="_blank" class="btn-project">GitHub Repo</a>
+                </div>
+                <div class="project">
+                    <h3>PIM1-Kinase-Inhibitor-QSAR</h3>
+                    <p>Machine Learning QSAR Study for Investigating Inhibitory Molecule for PIM-1 Kinase.</p>
+                    <a href="https://github.com/AramDonyaee/PIM1-Kinase-Inhibitor-QSAR" target="_blank"
+                        class="btn-project">GitHub Repo</a>
+                </div>
+                <div class="project">
+                    <h3>SBA-DEG-Analysis</h3>
+                    <p>Identification of novel hub genes for Small Bowel Adenocarcinoma.</p>
+                    <a href="https://github.com/AramDonyaee/SBA-DEG-Analysis" target="_blank" class="btn-project">GitHub
+                        Repo</a>
+                </div>
+                <div class="project">
+                    <h3>Mylinx</h3>
+                    <p>A multi-featured link-in-bio generator built with Laravel and Vue.js.</p>
+                    <a href="https://github.com/AramDonyaee/Mylinx" target="_blank" class="btn-project">GitHub Repo</a>
+                </div>
+                <div class="project">
+                    <h3>ChEMBL-Explorer</h3>
+                    <p>A web application for downloading bioactivity data from the ChEMBL database (Python,
+                        Streamlit).</p>
+                    <a href="https://github.com/AramDonyaee/ChEMBL-Explorer" target="_blank" class="btn-project">GitHub
+                        Repo</a>
+                </div>
+                <div class="project">
+                    <h3>Blind navigation assistant system</h3>
+                    <p>Proposed an end-to-end deep-learning-based solution for assisting blind people with their
+                        navigation.</p>
+                    <p> The complete paper’s manuscript is available on my <a
+                            href="https://www.linkedin.com/in/aram-donyaee/">Linkedin</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>M.Sc. in Computer Engineering (Software)</h3>
+                <p>Azad University (2018-2020) - GPA: 3.8/4</p>
+                <p>Thesis: Virtual autonomous agent outdoor environment monitoring approach to improve the mobility of
+                    the blind by imitation learning.</p>
+            </div>
+            <div class="education-item">
+                <h3>B.Sc. in Computer Engineering (Software)</h3>
+                <p>Azad University (2015-2018) - GPA: 3.8/4</p>
+            </div>
+            <div class="education-item">
+                <h3>Languages</h3>
+                <ul>
+                    <li>English (Full Professional Proficiency) - IELTS overall 7.5</li>
+                    <li>Farsi (Native)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-info">
+
+                <p><i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:aramdonyaeeofficial@gmail.com">aramdonyaeeofficial@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/aram-donyaee"
+                        target="_blank">linkedin.com/in/aram-donyaee</a></p>
+                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/AramDonyaee"
+                        target="_blank">github.com/AramDonyaee</a></p>
+                <p><i class="fas fa-phone"></i> Phone: (+98) 919-122-9630</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 124, Sarvestan, Mehestan, Alborz, IRAN</p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Aram Donyaee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript (Same as before, but embedded)
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksLi = document.querySelectorAll('.nav-links li')
+
+        burger.addEventListener('click', () => {
+            // Toggle Nav
+            navLinks.classList.toggle('nav-active');
+
+            // Animate Links
+            navLinksLi.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`
+                }
+            });
+
+            // Burger Animation
+            burger.classList.toggle('toggle');
+
+        });
+    </script>
+</body>
+
+</html>
